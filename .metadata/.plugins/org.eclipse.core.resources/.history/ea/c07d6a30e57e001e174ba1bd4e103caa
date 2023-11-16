@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html xmls:th="http://www.thymeleaf.org"
+	xmlns:sec="http://www.thymeleaf.org/rxtras/spring-security"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	layout:decorate="~{layout}" lang="ko-kr">
+<head>
+<meta charset="UTF-8">
+<title>ROOM1</title>
+ <style>
+    swiper-container {
+      	width: 100%;
+      	height : calc(100vh - 100px);
+      	padding : 100px;		
+    }
+    swiper-slide {
+      	text-align: center;
+      	font-size: 40px;
+      	background: #fff;
+      	display: flex;
+      	justify-content: center;
+      	align-items: center;
+      	
+    }
+    swiper-slide img {
+    	position: relative;
+      	z-index : -1;
+      	width: 100%;
+      	height: 100%;
+      	object-fit: cover;
+    }
+    .p_absolute{
+    	position: absolute;
+    }
+    span{
+    display : inline-block;
+    color : white;
+    font-size : 40px;
+    left : 20%;
+    top : 40%;
+    }
+    div.room_info{
+    	width : 1200px;
+    	display : flex;
+    	align-items : center;
+    	justify-content : center;
+    }
+ </style>
+</head>
+<body>
+<div layout:fragment="content" class="main_sect_pnl">
+    <span class="p_absolute">
+		Wonderful Glamping & Caravan<br/>
+		<h2>원더풀 프라이빗온수풀 카라반</h2></span>
+		
+	<swiper-container class="mySwiper" pagination="true" pagination-clickable="true"navigation="true" space-between="30"
+    		centered-slides="true" autoplay-delay="2500" autoplay-disable-on-interaction="false">
+        	<swiper-slide><img th:src="@{/images/room1/room1_1.jpg}" alt=""></swiper-slide>
+        	<swiper-slide><img th:src="@{/images/room1/room1_2.jpg}" alt=""></swiper-slide>
+        	<swiper-slide><img th:src="@{/images/room1/room1_3.jpg}" alt=""></swiper-slide>
+        	<swiper-slide><img th:src="@{/images/room1/room1_5.jpg}" alt=""></swiper-slide>
+        	<swiper-slide><img th:src="@{/images/room1/room1_6.jpg}" alt=""></swiper-slide>
+        	<swiper-slide><img th:src="@{/images/room1/room1_7.jpg}" alt=""></swiper-slide>
+        	<swiper-slide><img th:src="@{/images/room1/room1_9.jpg}" alt=""></swiper-slide>
+        	<swiper-slide><img th:src="@{/images/room1/room1_10.jpg}" alt=""></swiper-slide>
+        	<swiper-slide><img th:src="@{/images/room1/room1_11.jpg}" alt=""></swiper-slide>
+        	<swiper-slide><img th:src="@{/images/room1/room1_12.jpg}" alt=""></swiper-slide>
+        	<swiper-slide><img th:src="@{/images/room1/room1_13.jpg}" alt=""></swiper-slide>
+        	<swiper-slide><img th:src="@{/images/room1/room1_15.jpg}" alt=""></swiper-slide>
+     </swiper-container>
+     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
+     
+     <div class="room_info">
+     	<img th:src="@{/images/room1/room_info}" alt="" width="850", height="350">
+     	<div class="room_text">
+     		<h2>원더풀 프라이빗온수풀 카라반</h2>
+     		Room Info
+
+			객실크기 : 20평
+
+			객실인원 : 기준 2명 /  최대 6명
+
+			객실타입 : 카라반(원룸형) + 화장실1+ 개별풀 + 개별테라스
+
+			구비시설 : TV, 더블침대, 커피포트, 전자렌지, 인덕션, 쿨러백, 요리도구, 호텔식침구류, 어메니티, 드라이기, 에어컨
+
+			공통사항 : 체크인 15:00 / 체크아웃 11:00
+
+			풀사이즈 : 2m x 4.5m x 90cm
+			기준인원 초과시 1인 1박당 3만원의 추가비용(영유아 인원수 포함(12개월 이하 무료) / 현장결제)
+			최대 인원 초과 인원은 입실이 불가합니다.
+			키즈풀빌라와 글램핑장과 이웃하여 야외 시설 공용으로 이용 가능합니다.
+			객실 배정은 랜덤배정으로 이용에 참고 부탁드립니다.(유선으로 지정 요청 불가능)
+			<div class="view"><a th:href="@{/room/room3}">RESERVE</a></div>
+     	</div>
+     </div>	
+</div>
+
+  
+</body>
+</html>

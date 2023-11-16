@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html xmls:th="http://www.thymeleaf.org"
+	xmlns:sec="http://www.thymeleaf.org/rxtras/spring-security"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	layout:decorate="~{layout}" lang="ko-kr">
+<head>
+<meta charset="UTF-8">
+<title>preview</title>
+</head>
+<body>
+	<div layout:fragment="content" class="main_sect_pnl">
+		<div class="main_room" > 
+			<h2>Rooms Preview<br></h2>
+			<b>객실 미리보기
+		</div>
+		
+		<div class="main_room_wrap">
+			<div class="content_wrap">
+				<img th:src="@{/images/room/room1.jpg}" style="width:800px; height: 550px;">
+			</div>
+			<div class="content_text">
+				<p>ROOM 01</p><br>
+				<b><h3>원더풀 프라이빗온수<br> 풀 카라반<h3></b><br>
+				객실크기 : 20평 <br>
+				객실유형 : 카라밤(원룸형) + 화장실1 + 개별풀 + 개별테라스<br>
+				기존인원 2명 / 최대인원 6명
+				<div class="view"><a th:href="@{/room/room1}">VIEW MORE</a></div>
+			</div>
+		</div>
+			
+		<div class="main_room_wrap">	
+			<div class="content_text">
+				<p>ROOM 02</p>
+				<b><h3>원더풀 카라반<h3></b><br>
+				객실크기 : 20평 <br>
+				객실유형 : 카라밤(원룸형) + 화장실1 + 개별테라스<br>
+				기존인원 2명 / 최대인원 6명
+				<div class="view"><a th:href="@{/room/room2}">VIEW MORE</a></div>
+			</div>	
+			<div class="content_wrpa">
+				<img th:src="@{/images/room/room2.jpg}"  style="width:800px; height: 550px;">
+			</div>
+		</div>
+		
+		<div class="main_room_wrap">	
+			<div class="content_wrpa">
+				<img th:src="@{/images/room/room3.jpg}" style="width:800px; height: 550px;">
+			</div>
+			<div class="content_text">
+				<p>ROOM 02</p>
+				<b><h3>원더풀 글램핑<h3></b><br>
+				객실크기 : 20평 <br>
+				객실유형 : 글램핑(복층형) + 화장실1 + 개별테라스<br>
+				기존인원 2명 / 최대인원 8명
+				<div class="view"><a th:href="@{/room/room3}">VIEW MORE</a></div>
+			</div>
+		</div>	
+	</div>
+</body>
+</html>

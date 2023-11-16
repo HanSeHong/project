@@ -1,0 +1,39 @@
+package com.javateam.memberProject.domain;
+
+import java.util.Date;
+
+import javax.persistence.Column;
+import javax.persistence.Id;
+
+import org.springframework.format.annotation.DateTimeFormat;
+
+import lombok.Data;
+
+@Data
+public class RoomDTO {
+	
+	private String memberID; //회원아이디
+	private String roomNum; //호실
+	@DateTimeFormat(pattern="yyyy-MM-dd")
+	private Date reserve1; //입실일자
+	@DateTimeFormat(pattern="yyyy-MM-dd")
+	private Date reserve2; //퇴실일자
+	
+	/*
+	 * @Override public String toString() { return "RoomDTO [memberID=" + memberID +
+	 * ", roomNum=" + roomNum + ", reserve1=" + reserve1 + ", reserve2=" + reserve2
+	 * + "]"; }
+	 */
+
+	public RoomVO toEntity() {
+		
+		return new RoomVO(memberID, roomNum,reserve1,reserve2);
+	}
+
+	public RoomDTO() {
+		super();
+	}
+	
+	
+	
+}

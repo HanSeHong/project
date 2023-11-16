@@ -1,0 +1,52 @@
+package com.javateam.memberProject.domain;
+
+import java.util.Date;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+import org.hibernate.annotations.CreationTimestamp;
+
+import com.fasterxml.jackson.annotation.JsonFormat;
+
+import lombok.ToString;
+import lombok.extern.slf4j.Slf4j;
+import lombok.Data;
+
+@ToString
+@Entity
+@Table(name="ROOM_TBL")
+public class RoomVO {
+	@Id
+	@GeneratedValue
+	@Column
+	private int id;
+	
+	@Column(name="MEMBERID")
+	private String memberID;
+	
+	@Column(name ="ROOMNUM")
+	private String roomNum;
+	
+	@Column(name="RESERVE1")
+	@CreationTimestamp
+	@JsonFormat(pattern="yyyy-MM-dd")
+	private Date reserve1;
+	
+	@JsonFormat(pattern="yyyy-MM-dd")
+	@CreationTimestamp
+	@Column(name="RESERVE2")
+	private Date reserve2;
+
+	public RoomVO(String memberID, String roomNum, Date reserve1, Date reserve2) {
+		this.memberID = memberID;
+		this.roomNum = roomNum;
+		this.reserve1 = reserve1;
+		this.reserve2 = reserve2;
+	}
+	
+	
+}

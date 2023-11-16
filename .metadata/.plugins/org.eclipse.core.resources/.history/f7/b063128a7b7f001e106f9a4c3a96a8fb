@@ -1,0 +1,25 @@
+package com.javateam.memberProject.domain;
+
+import java.util.Date;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+import lombok.extern.slf4j.Slf4j;
+
+@Entity
+@Table(name="room_tbl")
+@Slf4j
+public class RoomVO {
+	@Id
+	@Column(name="MEMBERID")
+	private String memberID;
+	
+	private String roomNum;
+	
+	private Date reserve1;
+	private Date reserve2;
+}

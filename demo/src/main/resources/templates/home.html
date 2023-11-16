@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html xmls:th="http://www.thymeleaf.org"
+	 lang="ko-kr">
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" th:href="@{/css/style.css}">
+<style>
+    swiper-container {
+      width: 100%;
+      height: 320px;
+    }
+    swiper-slide {
+      text-align: center;
+      background: #fff;
+    }
+    swiper-slide img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  </style>
+</head>
+<body>
+	<div id="wrap">	
+		<header>
+			<ul id="menu1" >
+            	<li><a href="">HOME</a></li>
+            	<li><a href="">로그인</a></li>
+                <li><a href="">회원가입</a></li>
+                <li><form method="POST">
+                    <div class="search-box">
+                        <input height="20px" type="text" id="word" title="검색상품명" value placeholder="상품명을 입력하세요">
+                    </div>
+                </form></li>
+            </ul>
+            <ul id="menu2">
+            	<li id="logo"><a href=""><b>베스트<br>세계주류</b></a></li>
+                <li><a href="">와인</a></li>
+                <li><a href="">위스키</a></li>
+                <li><a href="">럼/진/보드카</a></li>
+                <li><a href="">리큐르/데낄라</a></li>
+                <li><a href="">브랜디/꼬냑</a></li>
+                <li><a href="">민속주/중국/일본</a></li>
+                <li><a href="">고객상담</a></li>
+            </ul>
+                        
+            <swiper-container class="mySwiper" pagination="true" pagination-clickable="true">
+                <swiper-slide><img th:src="@{/img/m-visual-01.jpg}" alt=""></swiper-slide>
+                <swiper-slide><img th:src="@{/img/m-visual-03.jpg}" alt=""></swiper-slide>
+
+            </swiper-container>
+            <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
+		</header>
+	</div>
+</body>
+</html>

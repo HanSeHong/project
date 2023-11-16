@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html xmls:th="http://www.thymeleaf.org"
+	xmlns:sec="http://www.thymeleaf.org/rxtras/spring-security"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	layout:decorate="~{layout}" lang="ko-kr">
+<head>
+<meta charset="UTF-8">
+<title>SPECIAL</title>
+</head>
+<body>
+	<div layout:fragment="content" class="main_sect_pnl">
+		<div class="main_special"  >
+			<!-- <img th:src="@{/images/special.jpeg}" width = "1900"> -->
+			<h2>Special Preview<br></h2>
+			<b>이용시설
+		</div>
+		
+		<div id="main_special_preview1">
+			<div><li><img th:src="@{/images/special/special01.PNG}" ></li>
+			<br>[야외수영장 운영안내]<br>
+			- 운영 기간 : 봄 ~ 가을<br>
+			- 이용 시간 : 오후 3시 ~ 오후 7시<br>
+			* 개장,폐장은 날씨에 따라 변경될수 있습니다.<br>
+			</div>
+			
+			<div><li><img th:src="@{/images/special/special02.PNG}"></li>
+			<br>[이용시간]<br>
+			- 입실 ~ 퇴실까지<br>
+			(1박 이용시 1회, 2박 이용시 2회 / 최소 하루 전 사전 예약 필수)<br>
+			[이용요금]<br>
+			- 수영장 미온수 유지 비용 32도~33도 1박 50,000원 추가요금이 발생됩니다.
+			</div>
+		</div>
+		
+		<div id="main_special_preview2" >
+			<div><li><img th:src="@{/images/special/special03.PNG}"></li>
+			<br>[위치]<br>
+			- 각 객실 테라스에서 이용가능합니다.<br>
+			[이용요금]<br>
+			- 그릴 20,000원의 추가요금이 발생됩니다.(*현장 결제)<br>
+			※ 개인그릴 사용 불가 적발 시 벌금 10만원
+			</div>
+			
+			<div><li><img th:src="@{/images/special/special04.PNG}"></li>
+			<br>[이용안내]<br>
+			- 입실 후 ~ 퇴실까지 이용 가능합니다.<br>
+			※ 음식물이나 주류를 이용후에는 꼭 정리부탁드립니다.<br><br>
+			</div>
+		</div>
+		
+		<div id="main_special_preview3">
+			<div><li><img th:src="@{/images/special/special05.PNG}"></li>
+			<br>[이용요금]<br>
+			- 바베큐(전기그릴) 이용료 20,000원의 추가요금이 발생됩니다. (*현장 결제)<br>
+			- 숯세트(숯+장갑+그릴1망+번개탄) 30,000원의 추가요금이 발생됩니다. (*현장 결제)<br>
+			</div>
+			
+			<div><li><img th:src="@{/images/special/special06.PNG}"></li>
+			<br>[이용안내]<br>
+			- 아이들이 서로 밀쳐서 사고가 나지않게 사전에 안전사고에 대한 각별한 주의 부탁드립니다.<br>
+			- 잔디에 침을 뱉는 등 더럽히는 행위는 절대금지입니다.<br>
+			- 다음사람을 위해 사용하신 물품은 정리정돈 부탁드립니다.
+			</div>
+		</div>
+		
+		<div id="main_special_preview4">
+			<div><li><img th:src="@{/images/special/special07.PNG}"></li>
+			<br>[이용안내]<br>
+			- 먹이주기 체험을 원하실 경우 펜션에 문의부탁드립니다.<br>
+			- 펜션에서 직접 관리하는 사랑스러운 아이들입니다. 폭력을 가하는 행동은 절대 삼가부탁드립니다.<br>
+			</div>
+			
+			<div><li><img th:src="@{/images/special/special08.PNG}"></li>
+			<br>[위치]<br>
+			- 관리동<br>
+			[이용시간]<br>
+			- 10:00 ~ 21:00
+			</div>
+		</div>
+	</div>
+</body>
+</html>

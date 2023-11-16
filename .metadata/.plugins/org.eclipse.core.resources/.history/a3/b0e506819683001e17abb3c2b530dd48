@@ -1,0 +1,27 @@
+package com.javateam.memberProject.service;
+
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
+import java.util.stream.Stream;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
+
+import com.javateam.memberProject.dao.RoomDAO;
+import com.javateam.memberProject.domain.RoomVO;
+
+import lombok.extern.slf4j.Slf4j;
+
+@Service
+@Slf4j
+public class RoomService {
+	
+	@Autowired
+	private RoomDAO roomDAO;
+	/*
+	 * @Transactional(readOnly = true) public RoomVO getRoom(int id) { return
+	 * roomDAO.findById(id).get(); }
+	 */
+}

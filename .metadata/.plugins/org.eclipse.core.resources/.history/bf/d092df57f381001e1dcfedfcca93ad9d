@@ -1,0 +1,11 @@
+package com.javateam.memberProject.dao;
+
+import java.util.List;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import com.javateam.memberProject.domain.RoomVO;
+
+public interface RoomDAO extends JpaRepository<RoomVO, String>{
+	List<RoomVO> findAll();
+}

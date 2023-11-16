@@ -1,0 +1,30 @@
+package com.javateam.memberProject.controller;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+
+import com.javateam.memberProject.dao.RoomDAO;
+import com.javateam.memberProject.domain.RoomDTO;
+import com.javateam.memberProject.domain.RoomVO;
+
+import groovy.util.logging.Slf4j;
+
+@Controller
+@Slf4j
+public class RoomController {
+	@Autowired
+	private RoomDAO roomDAO;
+	
+	public String save(RoomDTO dto) {
+		
+		//dto를 entity로 변환
+		RoomVO vo =dto.toEntity();
+		
+		//변환한 entity를 저장
+		RoomVO svaed = roomDAO.save(vo);
+		
+		//페이지 리턴
+		
+		return null;
+	}
+}

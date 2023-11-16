@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html xmls:th="http://www.thymeleaf.org"
+	xmlns:sec="http://www.thymeleaf.org/rxtras/spring-security"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	layout:decorate="~{layout}" lang="ko-kr">
+<style>
+    swiper-container {
+      width: 100%;
+      height: 400px;
+    }
+    swiper-slide {
+      text-align: center;
+      background: #fff;
+    }
+    swiper-slide img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+ </style>
+  
+<head>
+<meta charset="UTF-8">
+<title>home1</title>
+</head>
+
+<body>
+	<div layout:fragment="content" class="main_sect_pnl" >
+	<!-- <div layout:fragment="content" class="main_sect_pnl" th:style=" 'background-image: url(/images/1.jpg)' "> -->
+		<!-- <img th:src="@{/images/1.jpg}" alt=""> -->
+		
+		<div class="main_intro_title">
+			<img id="main_slide" th:src="@{/images/main_slide.png}" alt="">
+		</div> <!-- main_intro_title -->
+		
+		<div class="main_intro_comment"> <!-- 설명 -->
+			<img th:src="@{/images/logo2.png}">
+		</div>	
+		
+		<div class="main_intro_text">
+		<span>아름다운 자연 속에 위치한 원더풀 글램핑 앤 카라반 <br>
+			여유를 즐기며 소중한 시간 보내세요!</span>
+		</div>
+		
+		<swiper-container class="mySwiper" pagination="true" pagination-clickable="true" autoplay-delay="2500" autoplay-disable-on-interaction="false">
+        	<swiper-slide><img th:src="@{/images/slide1.jpg}" alt=""></swiper-slide>
+        	<swiper-slide><img th:src="@{/images/slide2.webp}" alt=""></swiper-slide>
+        	<swiper-slide><img th:src="@{/images/slide3.webp}" alt=""></swiper-slide>
+        	<swiper-slide><img th:src="@{/images/slide4.webp}" alt=""></swiper-slide>
+        	<swiper-slide><img th:src="@{/images/slide5.webp}" alt=""></swiper-slide>
+        	<swiper-slide><img th:src="@{/images/slide6.webp}" alt=""></swiper-slide>
+        	<swiper-slide><img th:src="@{/images/slide7.webp}" alt=""></swiper-slide>
+        	<swiper-slide><img th:src="@{/images/slide8.webp}" alt=""></swiper-slide>
+        	<swiper-slide><img th:src="@{/images/slide9.webp}" alt=""></swiper-slide>
+        	<swiper-slide><img th:src="@{/images/slide10.webp}" alt=""></swiper-slide>
+        	<swiper-slide><img th:src="@{/images/slide11.webp}" alt=""></swiper-slide>
+        	<swiper-slide><img th:src="@{/images/slide12.webp}" alt=""></swiper-slide>
+        	<swiper-slide><img th:src="@{/images/slide13.webp}" alt=""></swiper-slide>
+        	<swiper-slide><img th:src="@{/images/slide14.webp}" alt=""></swiper-slide>
+     	</swiper-container>
+      	<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
+	</div>
+	<div>
+		<h1>ACCOMMODATION</h1>
+		<h2>한 번쯤 꿈꿔왔던 공간을 소개합니다</h2>
+		<div class="line"></div>
+	</div>
+	
+	<div> 
+		<a th:href="@{/room/room1}"><img th:src="@{/images/Home/room1.PNG}"></a>
+		<a th:href="@{/room/room2}"><img th:src="@{/images/Home/room2.PNG}"></a>
+		<a th:href="@{/room/room3}"><img th:src="@{/images/Home/room3.PNG}"></a>
+	</div>
+
+</body>
+</html>

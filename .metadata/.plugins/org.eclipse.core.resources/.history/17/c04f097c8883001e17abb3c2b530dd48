@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="ko"
+      xmlns:th="http://www.thymeleaf.org">
+
+<div th:fragment="footer" >
+
+     <div class="footer_sect_pnl">
+       	<h3>Wonderful Glamping & Caravan</h3><br><br>
+       	TEL. 010-1234-5678<br>
+		BANK. 농협 123-4567-8912-34(예금주 : 한세홍(원더풀 글램핑 앤 카라반))
+		<br><br>
+		<p>주소:경기도 가평군 상면 임초밤안골로 115-45(임초리 199-3)</p>
+		<p>상호:원더풀 글램핑 앤 카라반 | 대표자:한세홍 | 사업자번호:123-12-123456</p>
+     </div> 
+    
+</div>
+
+</html>

@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html xmls:th="http://www.thymeleaf.org"
+	xmlns:sec="http://www.thymeleaf.org/rxtras/spring-security"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	layout:decorate="~{layout}" lang="ko-kr">
+<head>
+<meta charset="UTF-8">
+<title>TRAVEL</title>
+
+ <style>
+    swiper-container {
+    
+      	width: 31vw;
+      	height: 300px;
+		padding : 15px;		
+    }
+    swiper-slide {
+      text-align: center;
+      font-size: 18px;
+      background: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    swiper-slide img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+ </style>
+</head>
+<body>
+<div layout:fragment="content" class="main_sect_pnl" >
+	<div class="main_travel">
+		<h2>Travel<br></h2>
+		<b>주변관광지
+	</div>
+
+	<div class="travel_wrap">
+		<div class="travel_wrap_content">
+			<div id="travel_content">
+				<h2>아침고요수목원</h2>
+				<h4> </h4><br/>
+				<div id="travel_text">
+잣나무 숲이 울창한 축령산 자락에 한상경이 설계 조성한 수목원으로, 1996년 5월에 개원하였다. 한국식 정원의 모델을 표방하여 이에 맞도록 설계하였다. 보유식물은 총 5,000여 종이며, 자생식물이 2,000여 종, 외래식물이 3,000여 종이 있다. 수목원에는 고향집정원, 무궁화동산, 고산암석원, 분재정원, 에덴정원, 시가 있는 산책로, 천년향, 석정원, 하경정원, 한국주제정원 등의 특색 있는 정원이 있다. 이외에 산수경온실, 알파인온실, 아침고요갤러리, 역사관, 추억공작소 등의 부대시설이 있다. 야생화 정원과 무궁화 동산에는 우리나라 자생 야생화 1000여 종이 분포하고 있으며, 아이리스 정원에는 독일계 아이리스 800여 종이 있다. 석정원에는 230여 종의 고산 식물이 분포하고 있으며, 무궁화 200여 종도 있다. 그 밖에 백두산의 희귀 야생화 300여 종, 한국정원의 모란 40여 종 등 1,000여 종의 다양한 수목을 보유하고 있다.								
+				</div>
+			</div>
+			<swiper-container class="mySwiper" pagination="true" pagination-clickable="true"navigation="true" space-between="30"
+    		centered-slides="true" autoplay-delay="2500" autoplay-disable-on-interaction="false">
+        		<swiper-slide><img th:src="@{/images/travel1/travel1_1.jpg}" alt="" ></swiper-slide>
+        		<swiper-slide><img th:src="@{/images/travel1/travel1_2.jpg}" alt=""></swiper-slide>
+        		<swiper-slide><img th:src="@{/images/travel1/travel1_3.jpg}" alt=""></swiper-slide>
+        		<swiper-slide><img th:src="@{/images/travel1/travel1_4.jpg}" alt=""></swiper-slide>
+        		<swiper-slide><img th:src="@{/images/travel1/travel1_5.jpg}" alt=""></swiper-slide>
+        		<swiper-slide><img th:src="@{/images/travel1/travel1_6.jpg}" alt=""></swiper-slide>
+     		</swiper-container>
+		</div>
+		
+		<div class="travel_wrap_content">
+			<swiper-container class="mySwiper" pagination="true" pagination-clickable="true"navigation="true" space-between="30"
+    		centered-slides="true" autoplay-delay="2500" autoplay-disable-on-interaction="false">
+        		<swiper-slide><img th:src="@{/images/travel2/travel2_1.jpg}" alt="" ></swiper-slide>
+        		<swiper-slide><img th:src="@{/images/travel2/travel2_2.jpg}" alt=""></swiper-slide>
+        		<swiper-slide><img th:src="@{/images/travel2/travel2_3.jpg}" alt=""></swiper-slide>
+        		<swiper-slide><img th:src="@{/images/travel2/travel2_4.jpg}" alt=""></swiper-slide>
+     		</swiper-container>
+     		
+     		<div id="travel_content">
+				<h2>제이든 가든</h2>
+				<h4> </h4><br/>
+				<div id="travel_text">
+2011년 4월에 개관하였으며, 총 163,528㎡ 부지에 조성되었다. 단풍나무류, 붓꽃류, 만병초류, 블루베리류 등 총 2,662종류의 식물을 보유하고 있다. 식물원은 정원이 각각 24개의 테마로 구성되어 있는데, 영국식 정원, 키친가든, 은행나무 미로원 등을 비롯하여, 유럽풍의 정원, 경치를 중심으로 한 정원, 전망을 볼 수 있는 정원 등의 3개의 주제에 따라 분류되어 있다. 각각 코스마다 단풍나무길, 숲속바람길 등과 같은 산책로로 구성되어 있다. 강원도 춘천시 남산면 햇골길 80(서천리)에 있다.
+				</div>
+			</div>
+		</div>
+		
+		<div class="travel_wrap_content">
+			<div id="travel_content">
+				<h2>쁘띠프랑스</h2>
+				<h4> </h4><br/>
+				<div id="travel_text">
+청평댐에서 남이섬 방향으로 호숫가 길을 따라 10km쯤 가다 보면 왼쪽 언덕에 이국적 건물들이 옹기종기 모여 있는 걸 볼 수 있다. 건물만 보면 지중해 연안의 마을 같기도 하고 호명산의 수려한 주위 배경과 함께 보면 마치 알프스 산록의 전원마을 같은 이곳은, 프랑스 문화마을 쁘띠프랑스이다. 쁘띠프랑스의 컨셉트는 꽃과 별, 그리고 어린왕자이다. 쁘띠프랑스는 청소년수련시설(고성청소년수련원)을 겸한 프랑스 문화마을로, 가평군 청평면 고성리 일대에 조성됐다. 쁘띠프랑스는 프랑스풍 건물로 이루어져 있으며 관람객들은 숙박을 하면서 프랑스의 의식주 문화를 체험할 수 있다. 이밖에 쌩텍쥐페리의 일생과 어린왕자 등 작품세계를 설명한 쌩텍쥐페리 기념관, 200년 된 오르골에서 나오는 감미로운 선율을 들을 수 있는 오르골 하우스, 프랑스 고택을 그대로 들여와 지은 프랑스 전통주택 전시관, 프랑스의 상징인 닭 조각과 그림, 자기를 비롯해 프랑스 및 유럽에서 수집한 골동품을 볼 수 있는 골동품 전시관 등에서도 독특한 프랑스 문화를 체험할 수 있다. 최대 200여 명 수용 가능한 4∼10인용 객실을 갖추고 있어 단체수련회나 MT 장소로도 좋은 곳이다.
+				</div>
+			</div>
+			
+			<swiper-container class="mySwiper" pagination="true" pagination-clickable="true"navigation="true" space-between="30"
+    		centered-slides="true" autoplay-delay="2500" autoplay-disable-on-interaction="false">
+        		<swiper-slide><img th:src="@{/images/travel3/travel3_1.jpg}" alt="" ></swiper-slide>
+        		<swiper-slide><img th:src="@{/images/travel3/travel3_2.jpg}" alt=""></swiper-slide>
+        		<swiper-slide><img th:src="@{/images/travel3/travel3_3.jpg}" alt=""></swiper-slide>
+        		<swiper-slide><img th:src="@{/images/travel3/travel3_4.jpg}" alt=""></swiper-slide>
+     		</swiper-container>
+		</div>
+		
+		<div class="travel_wrap_content">
+			<swiper-container class="mySwiper" pagination="true" pagination-clickable="true"navigation="true" space-between="30"
+    		centered-slides="true" autoplay-delay="2500" autoplay-disable-on-interaction="false">
+        		<swiper-slide><img th:src="@{/images/travel4/travel4_1.jpg}" alt="" ></swiper-slide>
+     		</swiper-container>
+     		
+     		<div id="travel_content">
+				<h2>레일바이크</h2>
+				<h4> </h4><br/>
+				<div id="travel_text">
+멈춰버린 경춘선에 새로운 생명을 불어넣어 레일바이크로 다시 달리고 있습니다. 가을이면 북한강의 가을 단풍의 모습은 그야말로 장관입니다. 사랑하는 사람과 잊지 못할 추억을 만들기에는 충분한 장소입니다.				</div>
+			</div>
+		</div>
+		
+		<div class="travel_wrap_content">
+			<div id="travel_content">
+				<h2>남이섬</h2>
+				<h4> </h4><br/>
+				<div id="travel_text">
+북한강에 있는 강섬으로서 총면적은 14여 만 평에 이른다. 원래는 홍수 때에만 섬으로 고립되었으나, 청평(淸平)댐의 건설로 완전한 섬을 이루게 되었다. 남이 장군의 묘소가 있는 것에 연유하여 남이섬이라 부르게 되었다. 넓은 잔디밭이 전개되어 있고 둘레에 밤나무숲이 무성하고, 별장•방갈로•수영장 등 오락시설이 잘 정비되어 있으며, 서울과 가까워 많은 관광객이 찾아든다. 백자작나무길, 잣나무길, 메타 세콰이어길 등 운치있는 숲길이 명소이다. 드라마 겨울 연가의 촬영장소로 알려져 있다.
+				</div>
+			</div>
+			
+			<swiper-container class="mySwiper" pagination="true" pagination-clickable="true"navigation="true" space-between="30"
+    		centered-slides="true" autoplay-delay="2500" autoplay-disable-on-interaction="false">
+        		<swiper-slide><img th:src="@{/images/travel5/travel5_1.jpg}" alt="" ></swiper-slide>
+        		<swiper-slide><img th:src="@{/images/travel5/travel5_2.jpg}" alt=""></swiper-slide>
+        		<swiper-slide><img th:src="@{/images/travel5/travel5_3.jpg}" alt=""></swiper-slide>
+        		<swiper-slide><img th:src="@{/images/travel5/travel5_4.jpg}" alt=""></swiper-slide>
+     		</swiper-container>			
+		</div>
+		
+		<div class="travel_wrap_content">
+			<swiper-container class="mySwiper" pagination="true" pagination-clickable="true"navigation="true" space-between="30"
+    		centered-slides="true" autoplay-delay="2500" autoplay-disable-on-interaction="false">
+        		<swiper-slide><img th:src="@{/images/travel6/travel6_1.jpg}" alt="" ></swiper-slide>
+        		<swiper-slide><img th:src="@{/images/travel6/travel6_2.jpg}" alt=""></swiper-slide>
+        		<swiper-slide><img th:src="@{/images/travel6/travel6_3.jpg}" alt=""></swiper-slide>
+     		</swiper-container>
+     		
+     		<div id="travel_content">
+				<h2>자라섬</h2>
+				<h4> </h4><br/>
+				<div id="travel_text">
+매년 가을이면 풍성하고 다양한 재즈페스티벌이 열려 유명해진 자라섬은 마치 생긴 모양이 자라의 모양을 하고 있으며 비가오면 물이 불어 섬이 약간 잠기었다가 나타난다하여 붙여진 이름이기도 합니다. 또한 자라섬은 가평군에서 지명 위원회까지 열어 지었을 정도로 유래 깊은 이름입니다. 약4km에 이르는 수변 산책로와 해바라기, 코스모스, 맨드라미등 갖가지 야생꽃과 체육시설, 자연수목휴양림등이 있어 한두번쯤은 가보고 싶은 낭만의 섬중에 하나입니다. 자라섬은 우리에게 인간의 때묻지 않은 순수함과 따뜻함을 전해주고 있으며 여행을 함에 있어 낭만과 사색의 공간을 줄 수 있을 만큼 여유롭고 자유분방한 섬이라 할 수 있습니다.				</div>
+			</div>
+		</div>
+		
+		<div class="travel_wrap_content">
+			<div id="travel_content">
+				<h2>엘리시안강촌</h2>
+				<h4> </h4><br/>
+				<div id="travel_text">
+슬로프는 초,중,상급 별로 실력에 따라 다양하게 선택할 수 있고 부대시설로는 렌탈하우스, 스키학교, 의무실등이 있습니다. 보통 12월부터 이듬해 3월까지 개장하며 야간에도 운영합니다. 경춘선 강촌역에 있으며 스키시즌 중에는 수도권 전지역에서 단지까지 셔틀버스를 운행합니다.				</div>
+			</div>
+			
+			<swiper-container class="mySwiper" pagination="true" pagination-clickable="true"navigation="true" space-between="30"
+    		centered-slides="true" autoplay-delay="2500" autoplay-disable-on-interaction="false">
+        		<swiper-slide><img th:src="@{/images/travel7/travel7_1.jpg}" alt="" ></swiper-slide>
+        		<swiper-slide><img th:src="@{/images/travel7/travel7_2.jpg}" alt=""></swiper-slide>
+     		</swiper-container>
+		</div>
+		
+		<div class="travel_wrap_content">
+			<swiper-container class="mySwiper" pagination="true" pagination-clickable="true"navigation="true" space-between="30"
+    		centered-slides="true" autoplay-delay="2500" autoplay-disable-on-interaction="false">
+        		<swiper-slide><img th:src="@{/images/travel8/travel8_1.jpg}" alt=""></swiper-slide>
+        		<swiper-slide><img th:src="@{/images/travel8/travel8_2.jpg}" alt=""></swiper-slide>
+     		</swiper-container>
+     		
+     		<div id="travel_content">
+				<h2>청평호 수상레져</h2>
+				<h4> </h4><br/>
+				<div id="travel_text">
+면적 12.5㎢, 만수면적 19㎢, 저수량 1억 8000만t으로, 1943년 청평댐이 완공되면서 만들어졌다. 1977년 북한강 본류권 일부 지역의 보호수면으로 지정되었다가 1984년 11월 해제되었다. 호명산·화야산이 양쪽에 솟아 있어 주변 경관이 좋고, 잉어·붕어 등 풍부한 어종으로 낚시꾼들의 발길이 끊이지 않으며, 호반을 도는 자동차 드라이브 코스가 빼어나 가평 8경 가운데 하나로 꼽힌다. 주변에 안전·산장·자연·밤나무골 등 유원지가 많고, 호수에서 모터보트와 수상스키 등 수상 스포츠를 즐길 수 있으며, 유람선이 운항되어 주말이면 행락객으로 붐빈다. 가평시내에서 청평유원지행 시내버스가 운행되며, 매년 4월 1일부터 11월 30일까지 청평댐에서 홍천군 마곡유원지까지 유람선이 운항된다. 승용차로 가려면 구리시 교문4거리에서 6번 국도를 타고 덕소를 지나 팔당댐을 거쳐 양수교를 건넌 뒤, 363번 지방도를 타고 청평댐을 지나 오른쪽 37번 국도를 타면 호수로 갈 수 있다.			
+				</div>
+			</div>		
+		</div>
+		
+		<div class="travel_wrap_content">
+			<div id="travel_content">
+				<h2>잣향기푸른숲</h2>
+				<h4> </h4><br/>
+				<div id="travel_text">
+경기도 잣향기푸른숲은 수령(樹齡) 80년 이상의 잣나무림이 국내 최대로 분포하고 있으며, 피톤치드 가득한 쾌적한 잣나무숲에서 숲체험과 산림치유 프로그램을 복합적으로 체험할 수 있는 특별한 산림휴양 공간이다. 축령산과 서리산 자락 해발 450~600에 위치하고 있는 경기도 잣향기푸른숲은 수령80년 이상의 잣나무가 국내 최대로 분포하고 있는 곳이다.
+				</div>
+			</div>
+			
+			<swiper-container class="mySwiper" pagination="true" pagination-clickable="true"navigation="true" space-between="30"
+    		centered-slides="true" autoplay-delay="2500" autoplay-disable-on-interaction="false">
+        		<swiper-slide><img th:src="@{/images/travel9/travel9_1.jpg}" alt="" ></swiper-slide>
+        		<swiper-slide><img th:src="@{/images/travel9/travel9_2.jpg}" alt=""></swiper-slide>
+     		</swiper-container>
+		</div>
+		
+		<div class="travel_wrap_content">
+			<swiper-container class="mySwiper" pagination="true" pagination-clickable="true"navigation="true" space-between="30"
+    			centered-slides="true" autoplay-delay="2500" autoplay-disable-on-interaction="false">
+        		<swiper-slide><img th:src="@{/images/travel10/travel10_1.jpg}" alt="" ></swiper-slide>
+        		<swiper-slide><img th:src="@{/images/travel10/travel10_2.jpg}" alt=""></swiper-slide>
+     		</swiper-container>
+     		
+     		<div id="travel_content">
+				<h2>양평 두물머리</h2>
+				<h4> </h4><br/>
+				<div id="travel_text">
+두물머리[兩水里]는 금강산에서 흘러내린 북한강과 강원도 금대봉 기슭 검룡소(儉龍沼)에서 발원한 남한강의 두 물이 합쳐지는 곳이라는 의미이며 한자로는 兩水里를 쓰는데, 이곳은 양수리에서도 나루터를 중심으로 한 장소를 가리킨다. TV 드라마나 영화를 통해 널리 알려진 곳이며 결혼기념 사진 촬영장소로 인기가 높다. 예전에는 이곳의 나루터가 남한강 최상류의 물길이 있는 강원도 정선군과 충청북도 단양군, 그리고 물길의 종착지인 서울 뚝섬과 마포나루를 이어주던 마지막 정착지인 탓에 매우 번창하였다. 그러다가 팔당댐이 건설되면서 육로가 신설되자 쇠퇴하기 시작하여, 1973년 팔당댐이 완공되고 일대가 그린벨트로 지정되자 어로행위 및 선박건조가 금지되면서 나루터 기능이 정지되었다. 사유지이지만, 이른 아침에 피어나는 물안개, 옛 영화가 얽힌 나루터, 강으로 늘어진 많은 수양버들 등 강가마을 특유의 아름다운 경관으로 인해 웨딩·영화·광고·드라마 촬영 장소로 자주 이용되고 있다. 또 사진동호인들의 최고 인기 촬영장이기도 한데, 특히 겨울 설경과 일몰이 아름다운 것으로 알려져 있다.			
+				</div>
+			</div>
+		</div>
+		
+		<div class="travel_wrap_content">
+			<div id="travel_content">
+				<h2>남양주 물의정원</h2>
+				<h4> </h4><br/>
+				<div id="travel_text">
+남양주 물의 정원은 국토교통부가 2012년 한강 살리기 사업으로 조성한 484,188㎡의 광대한 면적의 수변생태공원으로 조성되었다. 인근에 사는 주민들에게 물의 정원은 산책로와 자전거도로를 따라 조깅을 즐기고 라이딩을 즐기기 위해 방문하는 ‘동네공원이지만, 외부인들에게는 일부러 시간 내서 데이트하러 오는 관광지이기도 하다. 물의정원은 자연과 소통하여 몸과 마음을 정화하고 치유하는 자연친화적 휴식공간이다. 물의정원 상징교인 뱃나들이교를 건너면 강변산책로변으로 대단지 초화 단지가 조성되어 5월에는 양귀비, 9월에는 노랑코스모스를 만끽할 수 있다. 수려한 북한강과 초화단지가 어우러진다.			
+				</div>
+			</div>
+			
+			<swiper-container class="mySwiper" pagination="true" pagination-clickable="true"navigation="true" space-between="30"
+    		centered-slides="true" autoplay-delay="2500" autoplay-disable-on-interaction="false">
+        		<swiper-slide><img th:src="@{/images/travel11/travel11_1.jpg}" alt="" ></swiper-slide>
+        		<swiper-slide><img th:src="@{/images/travel11/travel11_2.jpg}" alt=""></swiper-slide>
+     		</swiper-container>
+		</div>
+	</div>
+	<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
+</div>
+
+  <script>
+    var swiper = new Swiper(".mySwiper", {
+      spaceBetween: 30,
+      centeredSlides: true,
+      autoplay: {
+        delay: 2500,
+        disableOnInteraction: false,
+      },
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+    });
+  </script>
+  
+</body>
+</html>

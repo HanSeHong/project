@@ -1,0 +1,9 @@
+package com.javateam.memberProject.dao;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import com.javateam.memberProject.domain.RoomVO;
+
+public interface Room2DAO extends JpaRepository<RoomVO, String>{
+
+}

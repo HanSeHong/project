@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html xmls:th="http://www.thymeleaf.org"
+	xmlns:sec="http://www.thymeleaf.org/rxtras/spring-security"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	layout:decorate="~{layout}" lang="ko-kr">
+<head>
+<meta charset="UTF-8">
+<title>ROOM1</title>
+ <style>
+    swiper-container {
+    
+      	width: 100%;
+      	height : calc(100vh - 100px);		
+    }
+    swiper-slide {
+    position: relative;
+      text-align: center;
+      font-size: 40px;
+      background: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      display : block;
+    }
+    swiper-slide img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .p_absolute{
+    	position: absolute;
+    	color: white;
+    	left: 30%;
+    }
+    span{display : inline-block;}
+ </style>
+</head>
+<body>
+<div layout:fragment="content" class="main_sect_pnl">
+	<span class="p_absolute">
+		Wonderful Glamping & Caravan<br/>
+		<h2>원더풀 프라이빗온수풀 카라반</h2>				
+    </span>
+		<swiper-container class="mySwiper" pagination="true" pagination-clickable="true"navigation="true" space-between="30"
+    		centered-slides="true" autoplay-delay="2500" autoplay-disable-on-interaction="false">
+        	<swiper-slide><img th:src="@{/images/room1/room1_1.jpg}" alt=""></swiper-slide>
+        	<swiper-slide><img th:src="@{/images/room1/room1_2.jpg}" alt=""></swiper-slide>
+        	<swiper-slide><img th:src="@{/images/room1/room1_3.jpg}" alt=""></swiper-slide>
+        	<swiper-slide><img th:src="@{/images/room1/room1_5.jpg}" alt=""></swiper-slide>
+        	<swiper-slide><img th:src="@{/images/room1/room1_6.jpg}" alt=""></swiper-slide>
+        	<swiper-slide><img th:src="@{/images/room1/room1_7.jpg}" alt=""></swiper-slide>
+        	<swiper-slide><img th:src="@{/images/room1/room1_9.jpg}" alt=""></swiper-slide>
+        	<swiper-slide><img th:src="@{/images/room1/room1_10.jpg}" alt=""></swiper-slide>
+        	<swiper-slide><img th:src="@{/images/room1/room1_11.jpg}" alt=""></swiper-slide>
+        	<swiper-slide><img th:src="@{/images/room1/room1_12.jpg}" alt=""></swiper-slide>
+        	<swiper-slide><img th:src="@{/images/room1/room1_13.jpg}" alt=""></swiper-slide>
+        	<swiper-slide><img th:src="@{/images/room1/room1_15.jpg}" alt=""></swiper-slide>
+     	</swiper-container>
+      	<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
+</div>
+
+  
+</body>
+</html>

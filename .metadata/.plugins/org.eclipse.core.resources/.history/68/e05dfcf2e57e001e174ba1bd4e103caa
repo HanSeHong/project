@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<!-- saved from url=(0046)http://localhost:8181/memberProject/room/room1 -->
+<html lang="ko-kr" xmls:th="http://www.thymeleaf.org"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+
+<title>ROOM1</title>
+
+<!-- 10.17 : 전체적인 CSS 조정(추가/변경) -->
+
+<!-- bootstrap -->
+<link rel="stylesheet" href="./ROOM1_files/bootstrap.min.css">
+<script src="./ROOM1_files/bootstrap.min.js.다운로드" charset="UTF-8"></script>
+
+<style>
+body {
+	margin:0;
+	/* overflow:hidden;  *//* 내용 넘침 방지 */
+}
+/* 상단 menu 레이아웃 패널 */
+div.header_sect_pnl {
+	display :flex;
+	/* justify-content : space-between; */
+	color: #fff; 
+	height: 100px;
+	text-align : middle;
+}
+
+/* 중앙 content 레이아웃 패널  */ 
+div.main_sect_pnl {
+	width : 100%;
+	/* height:calc(100vh - 200px);  */
+	min-height : calc(100vh - 200px);
+	/* 컨텐츠 중앙 정렬 */
+
+ 	/* position : relative; */
+} 
+
+div.main_intro_title{
+	height : calc(100vh - 100px);
+	background-image: url(/memberProject/images/1.jpg);
+	background-repeat : no-repeat;
+	display : flex;
+	align-items:end;
+	justify-content:center;
+	padding-bottom : 100px;
+}
+
+div.main_intro_comment{
+	display : flex;
+	align-items:end;
+	justify-content:center;
+}
+
+div.main_intro_text{
+
+	text-align : center;
+	height : 70px;
+}
+div.main_about{
+	height : calc(100vh - 100px);
+	background-image : url(/memberProject/images/1.jpg);
+	background-repeat : no-repeat;
+	color :white;
+	font-size :45px;
+	text-align : center; 
+	padding-top : 550px;
+}
+div.main_room{
+	height : calc(100vh - 100px);
+	background-image : url(/memberProject/images/room/room.jpg);
+	background-repeat : no-repeat;
+	color :white;
+	font-size :45px;
+	text-align : center;
+	padding-top : 550px;
+	padding-bottom : 150px;
+}
+
+div.main_room_wrap{
+	width : 1400px;
+	margin :auto;
+	padding-top : 100px;
+	padding-bottom : 100px;
+	display : flex;
+	min-height : calc(100vh - 200px);
+	align-items : center;
+	flex-wrap: wrap;
+	align-content: space-between;
+	justify-content: space-between;
+}
+
+div.content_wrap{
+
+}
+
+div.content_text{
+	width: 600px;
+	
+}
+div.main_special{
+	height : calc(100vh - 100px);
+	background-image : url(/memberProject/images/special/special.jpeg);
+	background-repeat : no-repeat;
+	background-size : 1900px;
+	color :white;
+	font-size :45px;
+	text-align : center;
+	padding-top : 550px; 
+}
+
+div[id^='main_special'] {
+	display : flex;
+	/* align-items : center;
+	justify-content : center; */
+	padding : 60px;
+	justify-content : space-around;
+	list-style-type: none;
+}
+
+div.main_travel{
+	height : calc(100vh - 100px);
+	background-image : url(/memberProject/images/travel.jpg);
+	background-repeat : no-repeat;
+	color :white;
+	font-size :45px;
+	text-align : center;
+	padding-top : 550px;
+}
+
+div.travel_wrap {
+	padding-top: 100px;
+	margin: auto;
+	width : 1200px;
+	min-height : calc(100vh - 200px);
+}
+div.travel_wrap_content{
+	display : flex;
+	flex-direction: row;
+	justify-content: space-around;
+	padding-bottom : 50px;
+}
+/* 중앙 content 레이아웃 "컨텐츠" 패널  */
+div.content_sect_pnl {
+	width:100%;
+	height:100%;
+	/* overflow:auto; */ 
+	background-color:#fff;	
+} 
+div[id^='travel_content']{
+	width : 31vw;
+	
+	padding : 15px;
+}
+/* 하단 footer 레이아웃 패널 */
+div.footer_sect_pnl {
+	border: 1px solid #000;
+	color: #000;
+	height:100px;
+/* 	display:flex;
+	align-items:center;
+	justify-content:center;  */
+	/* position : relative;
+ 	transform : translateY(100%); */
+}
+
+ul#main_menu {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	/* overflow: hidden; */
+	background-color: #300;
+	width: 100vw;
+	display : flex;
+	justify-content : space-around;
+}
+
+/* ul#main_menu li {
+	float: left;
+	height : 100px;
+} */
+
+ul#main_menu li.main_menu_title {
+	
+	height : 100px;
+	float: left;
+	display : flex;
+	justify-content : center;
+	align-items : center;
+}
+
+ul#main_menu li a {
+ 	display: block; 
+	color: white;
+	text-decoration: none;
+} 
+
+ul#main_menu li a:hover {
+	background-color: white;
+	color: black;
+	font-weight: bold;
+}
+</style>
+
+
+<style>
+    swiper-container {
+    
+      	width: 100%;
+      	height : calc(100vh - 100px);		
+    }
+    swiper-slide {
+    position: relative;
+      text-align: center;
+      font-size: 40px;
+      background: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      display : block;
+    }
+    swiper-slide img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .p_absolute{
+    	position: absolute;
+    }
+    span{display : inline-block;}
+ </style>
+
+</head>
+<body>
+
+	<div>
+
+	<div class="header_sect_pnl">
+			<!-- 10.17 : 
+			- Spring Security/Thymeleaf
+			: https://github.com/thymeleaf/thymeleaf-extras-springsecurity
+			
+			- Spring Security : Auth Method(인증/인가 관련 메서드)
+			: https://cafe.naver.com/ezjava3/756
+			-->
+		<ul id="main_menu">
+		
+			<li class="main_menu_title"><a href="http://localhost:8181/memberProject/"><img src="./ROOM1_files/logo.png"></a></li><!-- 로그인 인증이 안되었을 때  -->
+			
+			
+			
+			
+			
+				
+								
+			
+			<!-- 로그인 인증되었을 때   -->
+			<li class="main_menu_title"><a href="http://localhost:8181/memberProject/welcome">ABOUT</a></li>
+			<li class="main_menu_title"><a href="http://localhost:8181/memberProject/room">ROOM</a></li>
+			<li class="main_menu_title"><a href="http://localhost:8181/memberProject/special">SPECIAL</a></li>
+			<li class="main_menu_title"><a href="http://localhost:8181/memberProject/travel">TRAVEL</a></li>
+			<li class="main_menu_title"><a href="http://localhost:8181/memberProject/reserve">RESERVE</a></li>
+			<li class="main_menu_title"><a href="http://localhost:8181/memberProject/member/view.do">RESERVATION</a></li>
+			<li class="main_menu_title"><a href="http://localhost:8181/memberProject/logout">LOGOUT</a></li>			
+						
+			<!-- <li class="main_menu_title" sec:authorize="isAuthenticated()"><a th:href="@{/welcome}">마이페이지</a></li>
+			<li class="main_menu_title" sec:authorize="isAuthenticated()"><a th:href="@{/logout}">로그아웃</a></li>
+			<li class="main_menu_title" sec:authorize="isAuthenticated()"><a th:href="@{/member/view.do}">회원정보</a></li>
+			<li class="main_menu_title" sec:authorize="isAuthenticated()"><a th:href="@{/member/update.do}">회원정보수정</a></li>
+			10.18 -->
+			<!-- <li sec:authorize="isAuthenticated()"><a th:href="@{/board/write.do}">게시글 쓰기</a></li> -->
+			
+			<!-- 10.23 -->
+<!-- 			<li class="main_menu_title"  sec:authorize="isAuthenticated()"><a th:href="@{/board/list.do}">게시글 목록</a></li>
+ -->			
+			<!-- 등급(롤:role)이 관리자일 경우 -->
+			
+			
+		</ul>
+
+	</div>
+
+</div>
+	
+	<div class="main_sect_pnl">
+    <span class="p_absolute">
+		Wonderful Glamping &amp; Caravan<br>
+		<h2>원더풀 프라이빗온수풀 카라반</h2></span>
+		
+	<swiper-container class="mySwiper" pagination="true" pagination-clickable="true" navigation="true" space-between="30" centered-slides="true" autoplay-delay="2500" autoplay-disable-on-interaction="false"><template shadowrootmode="open"><div class="swiper swiper-initialized swiper-horizontal" part="container">
+      <slot name="container-start"></slot>
+      <div class="swiper-wrapper" part="wrapper" id="swiper-wrapper-9d11bac7585c1092f" aria-live="off" style="transition-duration: 0ms; transform: translate3d(-3531px, 0px, 0px); transition-delay: 0ms;">
+        <slot></slot>
+        
+      </div>
+      <slot name="container-end"></slot>
+      
+        <div part="button-prev" class="swiper-button-prev" tabindex="0" role="button" aria-label="Previous slide" aria-controls="swiper-wrapper-9d11bac7585c1092f" aria-disabled="false"><svg width="11" height="20" viewBox="0 0 11 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0.38296 20.0762C0.111788 19.805 0.111788 19.3654 0.38296 19.0942L9.19758 10.2796L0.38296 1.46497C0.111788 1.19379 0.111788 0.754138 0.38296 0.482966C0.654131 0.211794 1.09379 0.211794 1.36496 0.482966L10.4341 9.55214C10.8359 9.9539 10.8359 10.6053 10.4341 11.007L1.36496 20.0762C1.09379 20.3474 0.654131 20.3474 0.38296 20.0762Z" fill="currentColor" transform-origin="center" transform="rotate(180)"></path></svg>
+    </div>
+        <div part="button-next" class="swiper-button-next" tabindex="0" role="button" aria-label="Next slide" aria-controls="swiper-wrapper-9d11bac7585c1092f" aria-disabled="false"><svg width="11" height="20" viewBox="0 0 11 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0.38296 20.0762C0.111788 19.805 0.111788 19.3654 0.38296 19.0942L9.19758 10.2796L0.38296 1.46497C0.111788 1.19379 0.111788 0.754138 0.38296 0.482966C0.654131 0.211794 1.09379 0.211794 1.36496 0.482966L10.4341 9.55214C10.8359 9.9539 10.8359 10.6053 10.4341 11.007L1.36496 20.0762C1.09379 20.3474 0.654131 20.3474 0.38296 20.0762Z" fill="currentColor"></path></svg>
+    </div>
+      
+      
+        <div part="pagination" class="swiper-pagination swiper-pagination-clickable swiper-pagination-bullets swiper-pagination-horizontal"><span part="bullet" class="swiper-pagination-bullet" tabindex="0" role="button" aria-label="Go to slide 1"></span><span part="bullet" class="swiper-pagination-bullet" tabindex="0" role="button" aria-label="Go to slide 2"></span><span part="bullet" class="swiper-pagination-bullet" tabindex="0" role="button" aria-label="Go to slide 3"></span><span part="bullet-active" class="swiper-pagination-bullet swiper-pagination-bullet-active" tabindex="0" role="button" aria-label="Go to slide 4" aria-current="true"></span><span part="bullet" class="swiper-pagination-bullet" tabindex="0" role="button" aria-label="Go to slide 5"></span><span part="bullet" class="swiper-pagination-bullet" tabindex="0" role="button" aria-label="Go to slide 6"></span><span part="bullet" class="swiper-pagination-bullet" tabindex="0" role="button" aria-label="Go to slide 7"></span><span part="bullet" class="swiper-pagination-bullet" tabindex="0" role="button" aria-label="Go to slide 8"></span><span part="bullet" class="swiper-pagination-bullet" tabindex="0" role="button" aria-label="Go to slide 9"></span><span part="bullet" class="swiper-pagination-bullet" tabindex="0" role="button" aria-label="Go to slide 10"></span><span part="bullet" class="swiper-pagination-bullet" tabindex="0" role="button" aria-label="Go to slide 11"></span><span part="bullet" class="swiper-pagination-bullet" tabindex="0" role="button" aria-label="Go to slide 12"></span></div>
+      
+      
+    <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span></div></template>
+        	<swiper-slide role="group" aria-label="1 / 12" class="" style="width: 1147px; margin-right: 30px;"><template shadowrootmode="open"><slot></slot></template><img src="./ROOM1_files/room1_1.jpg" alt=""></swiper-slide>
+        	<swiper-slide role="group" aria-label="2 / 12" class="" style="width: 1147px; margin-right: 30px;"><template shadowrootmode="open"><slot></slot></template><img src="./ROOM1_files/room1_2.jpg" alt=""></swiper-slide>
+        	<swiper-slide role="group" aria-label="3 / 12" style="width: 1147px; margin-right: 30px;" class="swiper-slide-prev"><template shadowrootmode="open"><slot></slot></template><img src="./ROOM1_files/room1_3.jpg" alt=""></swiper-slide>
+        	<swiper-slide role="group" aria-label="4 / 12" style="width: 1147px; margin-right: 30px;" class="swiper-slide-active"><template shadowrootmode="open"><slot></slot></template><img src="./ROOM1_files/room1_5.jpg" alt=""></swiper-slide>
+        	<swiper-slide role="group" aria-label="5 / 12" style="width: 1147px; margin-right: 30px;" class="swiper-slide-next"><template shadowrootmode="open"><slot></slot></template><img src="./ROOM1_files/room1_6.jpg" alt=""></swiper-slide>
+        	<swiper-slide role="group" aria-label="6 / 12" style="width: 1147px; margin-right: 30px;" class=""><template shadowrootmode="open"><slot></slot></template><img src="./ROOM1_files/room1_7.jpg" alt=""></swiper-slide>
+        	<swiper-slide role="group" aria-label="7 / 12" style="width: 1147px; margin-right: 30px;" class=""><template shadowrootmode="open"><slot></slot></template><img src="./ROOM1_files/room1_9.jpg" alt=""></swiper-slide>
+        	<swiper-slide role="group" aria-label="8 / 12" style="width: 1147px; margin-right: 30px;" class=""><template shadowrootmode="open"><slot></slot></template><img src="./ROOM1_files/room1_10.jpg" alt=""></swiper-slide>
+        	<swiper-slide role="group" aria-label="9 / 12" style="width: 1147px; margin-right: 30px;" class=""><template shadowrootmode="open"><slot></slot></template><img src="./ROOM1_files/room1_11.jpg" alt=""></swiper-slide>
+        	<swiper-slide role="group" aria-label="10 / 12" style="width: 1147px; margin-right: 30px;" class=""><template shadowrootmode="open"><slot></slot></template><img src="./ROOM1_files/room1_12.jpg" alt=""></swiper-slide>
+        	<swiper-slide role="group" aria-label="11 / 12" style="width: 1147px; margin-right: 30px;" class=""><template shadowrootmode="open"><slot></slot></template><img src="./ROOM1_files/room1_13.jpg" alt=""></swiper-slide>
+        	<swiper-slide role="group" aria-label="12 / 12" style="width: 1147px; margin-right: 30px;" class=""><template shadowrootmode="open"><slot></slot></template><img src="./ROOM1_files/room1_15.jpg" alt=""></swiper-slide>
+     	</swiper-container>
+      	<script src="./ROOM1_files/swiper-element-bundle.min.js.다운로드"></script>
+</div>
+	
+	<div>
+
+     <div class="footer_sect_pnl">
+       	<b>Wonderful Glamping &amp; Caravan<br><br>
+       	TEL. 010-1234-5678<br>
+		BANK. 농협 123-4567-8912-34(예금주 : 한세홍(원더풀 글램핑 앤 카라반))
+     </b></div><b> 
+    
+</b></div><b>
+
+
+</b></body></html>

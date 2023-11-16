@@ -1,0 +1,5 @@
+package com.javateam.memberProject.dao;
+
+public interface RoomDAO {
+
+}

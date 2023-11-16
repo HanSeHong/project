@@ -1,0 +1,49 @@
+package com.javateam.memberProject.controller;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+
+import com.javateam.memberProject.dao.RoomDAO;
+import com.javateam.memberProject.domain.RoomDTO;
+import com.javateam.memberProject.domain.RoomVO;
+import com.javateam.memberProject.service.RoomService;
+
+import lombok.extern.slf4j.Slf4j;
+
+
+
+@Controller
+@Slf4j
+public class RoomController {
+	@Autowired
+	RoomService roomService;
+	
+	@Autowired
+	private RoomDAO roomDAO;
+	
+	/*
+	 * @GetMapping("/reserveProc") public String save(RoomDTO dto) {
+	 * log.info("asdasd"); //dto를 entity로 변환 RoomVO vo =dto.toEntity();
+	 * log.info("vo : "+vo);
+	 * 
+	 * //변환한 entity를 저장 RoomVO saved = roomDAO.save(vo); log.info("saved : "+saved);
+	 * 
+	 * //페이지 리턴
+	 * 
+	 * return "/home"; }
+	 */
+	   @GetMapping("/room")
+	   public String room(@RequestParam(value="id",defaultValue = "1") int id, Model model) {
+	      
+	      log.info("room");
+	      
+	      model.addAttribute("room", roomService.getRoom(id));
+	      model.addAttribute("dinings", roomService.getRandomDinings(3));
+	      
+	      return "room";
+	   }
+
+
+}

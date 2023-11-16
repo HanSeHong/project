@@ -1,0 +1,73 @@
+package com.javateam.memberProject.domain;
+
+import java.lang.reflect.Field;
+import java.util.Date;
+import java.util.Iterator;
+import java.util.Map;
+import java.util.Set;
+
+import javax.persistence.Column;
+import javax.persistence.Id;
+
+import org.springframework.format.annotation.DateTimeFormat;
+
+import lombok.Data;
+import lombok.extern.slf4j.Slf4j;
+
+@Slf4j
+@Data
+public class RoomDTO {
+	
+	private String memberID; //회원아이디
+	private String roomNum; //호실
+	@DateTimeFormat(pattern="yyyy-MM-dd")
+	private Date reserve1; //입실일자
+	@DateTimeFormat(pattern="yyyy-MM-dd")
+	private Date reserve2; //퇴실일자
+	
+	@Override
+	public String toString() {
+		return "RoomDTO [memberID=" + memberID + ", roomNum=" + roomNum + ", reserve1=" + reserve1 + ", reserve2="
+				+ reserve2 + "]";
+	}
+
+	/*
+	 * public RoomVO toEntity() {
+	 * 
+	 * return new RoomVO(memberID, roomNum,reserve1,reserve2); }
+	 */
+
+	public RoomDTO(Map<String, Object> requestMap) {
+		
+		Set<String> set = requestMap.keySet();
+		Iterator<String> it = set.iterator();
+		Field field; // reflection 정보 활용 
+		while (it.hasNext()) {
+			
+			 String fldName = it.next();
+		
+			 try {
+		    		// DTO와 1:1 대응되는 필드들 처리 
+			    	try {
+							field = this.getClass().getDeclaredField(fldName);
+							field.setAccessible(true);
+							
+								field.set(this, requestMap.get(fldName));
+							
+							
+					} catch (NoSuchFieldException e) {
+						
+						// 만약 VO와 1:1 대응되지 않는 인자일 경우는 이 부분에서 입력처리합니다.
+						log.info("인자와 필드가 일치하지 않습니다."); 
+						
+					} // try
+					
+			} catch (SecurityException | IllegalArgumentException | IllegalAccessException e) { 
+				e.printStackTrace();
+			} // try
+			 
+		} // while	 
+		
+	}
+	
+}

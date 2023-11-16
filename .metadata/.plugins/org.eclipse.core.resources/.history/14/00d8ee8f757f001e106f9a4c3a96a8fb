@@ -1,0 +1,6 @@
+create TABLE room_tbl{
+	id varchar(20),	--예약자
+	roomnum varchar(20),	--호실
+	reserve1 DATE,	--입실날짜 			
+	reserve2 DATE	--퇴실날짜
+	}	
